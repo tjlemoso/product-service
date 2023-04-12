@@ -22,8 +22,8 @@ public class Product {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long productId;
 
-  @Column(name = "createData")
-  private LocalDate createData;
+  @Column(name = "createDate")
+  private LocalDate createDate;
 
   @Column(name = "name")
   private String name;

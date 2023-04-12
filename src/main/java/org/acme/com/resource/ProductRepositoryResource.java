@@ -1,5 +1,6 @@
 package org.acme.com.resource;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -59,6 +60,7 @@ public class ProductRepositoryResource {
         if (product.getName() == "") {
             throw new WebApplicationException("Product was invalidly set on request.", 422);
         }
+        product.setCreateDate(LocalDate.now());
         productRepository.persist(product);
         return Response.ok(product).status(201).build();
     }

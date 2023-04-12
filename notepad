@@ -1,0 +1,2 @@
+criar pacote - mvn clean package
+deploy - gcloud app deploy --appyaml=product-service.yaml
